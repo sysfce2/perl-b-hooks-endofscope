@@ -8,7 +8,6 @@ plan skip_all => "Tests already executed in pure-perl mode"
   if $INC{'B/Hooks/EndOfScope/PP.pm'};
 
 use Config;
-use FindBin qw($Bin);
 use IPC::Open2 qw(open2);
 use File::Glob 'bsd_glob';
 
@@ -23,7 +22,7 @@ $ENV{DEVEL_HIDE_VERBOSE} = 0 if $has_dh;
 $ENV{B_HOOKS_ENDOFSCOPE_IMPLEMENTATION} = 'PP' unless $has_dh;
 
 # rerun the tests under the assumption of no vm at all
-for my $fn (bsd_glob("$Bin/0*.t")) {
+for my $fn (bsd_glob("t/0*.t")) {
 
   note "retesting $fn";
   my @cmd = (
