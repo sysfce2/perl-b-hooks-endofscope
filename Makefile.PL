@@ -17,7 +17,7 @@ my %RUN_DEPS = (
 );
 
 my %OPT_RUN_DEPS = (can_xs() ? (
-  'Variable::Magic' => '0.48', # when changing, also change it in B::Hooks::EndOfScope::XS
+  'Variable::Magic' => '0.48', # when changing, also update in dist.ini, B::Hooks::EndOfScope::XS
 
   # make sure we smoke the pure-perl version fallback
   is_smoker() ? ( 'Devel::Hide' => '0.0007' ) : (),
