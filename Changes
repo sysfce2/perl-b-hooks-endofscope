@@ -1,6 +1,7 @@
 
   * Variable::Magic added as a runtime recommendation for greater visibility
     (RT#89245)
+  * fixed broken logic in compiler detection on older perls
 
 0.12  Tue, 4 Dec 2012 20:13:00 +0000
   * Complete pure-perl implementation in addition to the one based on
