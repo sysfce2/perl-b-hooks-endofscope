@@ -24,6 +24,8 @@ $ENV{B_HOOKS_ENDOFSCOPE_IMPLEMENTATION} = 'PP' unless $has_dh;
 # rerun the tests under the assumption of no vm at all
 for my $fn (bsd_glob("t/0*.t")) {
 
+  next if $fn eq 't/00-report-prereqs.t';
+
   note "retesting $fn";
   my @cmd = (
     $^X,
