@@ -123,5 +123,5 @@ sub can_run {
 
 # is this a smoker?
 sub is_smoker {
-  return ( $ENV{AUTOMATED_TESTING} && ! $ENV{RELEASE_TESTING} )
+  return ( $ENV{AUTOMATED_TESTING} )
 }

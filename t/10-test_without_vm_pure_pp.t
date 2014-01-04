@@ -20,6 +20,8 @@ $ENV{PERL5LIB} = join ($Config{path_sep}, @INC);
 my $has_dh = eval { require Devel::Hide };
 die 'author tests require Devel::Hide for testing the PP path!' if not $has_dh
     and ($ENV{AUTHOR_TESTING} or $ENV{RELEASE_TESTING});
+fail 'smokers require Devel::Hide for testing the PP path!' if not $has_dh
+    and $ENV{AUTOMATED_TESTING};
 
 $ENV{DEVEL_HIDE_VERBOSE} = 0 if $has_dh;
 $ENV{B_HOOKS_ENDOFSCOPE_IMPLEMENTATION} = 'PP' unless $has_dh;
