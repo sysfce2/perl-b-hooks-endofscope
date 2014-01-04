@@ -27,7 +27,9 @@ $ENV{DEVEL_HIDE_VERBOSE} = 0 if $has_dh;
 $ENV{B_HOOKS_ENDOFSCOPE_IMPLEMENTATION} = 'PP' unless $has_dh;
 
 # rerun the tests under the assumption of no vm at all
-for my $fn (bsd_glob("t/0*.t")) {
+my @files = bsd_glob("t/0*.t");
+push @files, 'xt/author/00-compile.t' if $ENV{AUTHOR_TESTING};
+for my $fn (@files) {
 
   next if $fn eq 't/00-report-prereqs.t';
 
