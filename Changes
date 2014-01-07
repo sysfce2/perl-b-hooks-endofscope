@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.13      2014-01-07 21:17:39Z
   - Variable::Magic added as a runtime recommendation for greater visibility
     (RT#89245)
   - fixed broken logic in compiler detection on older perls
