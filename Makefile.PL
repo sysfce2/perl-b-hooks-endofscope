@@ -16,12 +16,19 @@ my %RUN_DEPS = (
 ##{ ($plugin->get_default('PREREQ_PM') =~ /^[^\n]*\n(.+)\n[^\n]+$/s)[0] ##}
 );
 
-my %OPT_RUN_DEPS = (can_xs() ? (
+my %OPT_RUN_DEPS = can_xs() ? (
   'Variable::Magic' => '0.48', # when changing, also update in dist.ini, B::Hooks::EndOfScope::XS
 
   # make sure we smoke the pure-perl version fallback
   is_smoker() ? ( 'Devel::Hide' => '0.0007' ) : (),
-) : () );
+) : (
+  'Hash::Util::FieldHash' => 0,
+  'Scalar::Util' => 0,
+  'Tie::Hash' => 0,
+  'Tie::StdHash' => 0,
+  'base' => 0,
+  'constant' => 0,
+);
 
 my %WriteMakefileArgs = (
   "NAME" => "B::Hooks::EndOfScope",
