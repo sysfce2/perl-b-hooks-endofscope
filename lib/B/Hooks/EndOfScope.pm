@@ -4,6 +4,8 @@ package B::Hooks::EndOfScope;
 use strict;
 use warnings;
 
+our $VERSION = '0.13';
+
 # note - a %^H tie() fallback will probably work on 5.6 as well,
 # if you need to go that low - sane patches passing *all* tests
 # will be gladly accepted
