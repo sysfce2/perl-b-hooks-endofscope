@@ -7,9 +7,6 @@ package # hide from pause
 use strict;
 use warnings;
 
-use warnings;
-use strict;
-
 our $VERSION = '0.14';
 
 use Tie::Hash ();
