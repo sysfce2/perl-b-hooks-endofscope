@@ -1,4 +1,4 @@
-# Implementtion of a pure-perl on_scope_end for perl 5.8.X
+# Implementation of a pure-perl on_scope_end for perl 5.8.X
 # (relies on lack of compile/runtime duality of %^H before 5.10
 # which makes guard object operation possible)
 
