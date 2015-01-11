@@ -10,6 +10,8 @@ use warnings;
 use warnings;
 use strict;
 
+our $VERSION = '0.14';
+
 use Tie::Hash ();
 use Hash::Util::FieldHash 'fieldhash';
 

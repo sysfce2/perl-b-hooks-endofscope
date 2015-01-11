@@ -7,6 +7,9 @@ package # hide from the pauses
 
 use strict;
 use warnings;
+
+our $VERSION = '0.14';
+
 use Scalar::Util ();
 
 # This is the original implementation, which sadly is broken
