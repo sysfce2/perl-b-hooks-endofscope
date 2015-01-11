@@ -1,5 +1,6 @@
 package B::Hooks::EndOfScope;
 # ABSTRACT: Execute code after a scope finished compilation
+# KEYWORDS: code hooks execution scope
 
 use strict;
 use warnings;
