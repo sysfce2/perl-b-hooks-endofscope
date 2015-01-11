@@ -1,8 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - line numbers in shipped code are now almost the same (within 3) as
-    the repository source, for easier debugging
+  - line numbers in shipped code are now the same as the repository source,
+    for easier debugging
   - more accurate dynamic prereq declarations
 
 0.13      2014-01-07 21:17:39Z
