@@ -6,7 +6,7 @@ use strict;
 
 our $VERSION = '0.15';
 
-use Module::Runtime 'require_module';
+use Module::Runtime 0.012 'require_module';
 use constant _PERL_VERSION => "$]";
 
 BEGIN {

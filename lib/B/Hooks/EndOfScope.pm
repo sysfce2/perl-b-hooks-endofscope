@@ -13,7 +13,7 @@ our $VERSION = '0.15';
 use 5.008001;
 
 BEGIN {
-  require Module::Implementation;
+  use Module::Implementation 0.05;
   Module::Implementation::build_loader_sub(
     implementations => [ 'XS', 'PP' ],
     symbols => [ 'on_scope_end' ],

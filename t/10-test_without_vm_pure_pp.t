@@ -17,7 +17,7 @@ $ENV{B_HOOKS_ENDOFSCOPE_IMPLEMENTATION} = '';
 # for the $^X-es
 $ENV{PERL5LIB} = join ($Config{path_sep}, @INC);
 
-my $has_dh = eval { require Devel::Hide };
+my $has_dh = eval { require Devel::Hide; Devel::Hide->VERSION('0.0007') };
 die 'author tests require Devel::Hide for testing the PP path!' if not $has_dh
     and ($ENV{AUTHOR_TESTING} or $ENV{RELEASE_TESTING});
 fail 'smokers require Devel::Hide for testing the PP path!' if not $has_dh
