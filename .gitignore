@@ -2,11 +2,5 @@
 /.build/
 !/.gitignore
 /.latest
-/Makefile
-/Makefile.old
-/MYMETA.*
-/pm_to_blib
-/blib/
-/_eumm/
 /B-Hooks-EndOfScope-*/
 /B-Hooks-EndOfScope-*.tar.gz
