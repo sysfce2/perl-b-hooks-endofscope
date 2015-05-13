@@ -5,6 +5,12 @@
     - possibly see stuff still in bourbon
 
 - merge https://github.com/bobtfish/b-hooks-endofscope/pull/2
+    i.e. https://rt.cpan.org/Ticket/Display.html?id=84872
+
+    - fileformat needs to be fixed
+    - tests use threads - skip when not threaded
+    - tests fail - need to mark as todo!!! -- have someone test on an ActiveState install?
+    - see https://rt.cpan.org/Ticket/Display.html?id=82922 for a potential solution?
 
 - time to re-add [Test::Version] with a bumped :version?
     [Test::Version]
