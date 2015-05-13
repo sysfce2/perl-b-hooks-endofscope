@@ -1,8 +1,12 @@
 - release the liquid horror swap
 
 - update Makefile.PL even more by using [DynamicPrereqs] -include_sub, -condition options
+    - see include_subs branch
+    - possibly see stuff still in bourbon
 
 - merge https://github.com/bobtfish/b-hooks-endofscope/pull/2
 
 - time to re-add [Test::Version] with a bumped :version?
+    [Test::Version]
+    ignore_unindexable = 1 ; this option doesn't exist yet
 
