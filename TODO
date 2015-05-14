@@ -1,5 +1,3 @@
-- release the liquid horror swap
-
 - update Makefile.PL even more by using [DynamicPrereqs] -include_sub, -condition options
     - see include_subs branch
     - possibly see stuff still in bourbon
