@@ -6,7 +6,6 @@ use strict;
 
 our $VERSION = '0.15';
 
-use Module::Runtime 0.012 'require_module';
 use constant _PERL_VERSION => "$]";
 
 BEGIN {
@@ -15,11 +14,11 @@ BEGIN {
     die "By design B::Hooks::EndOfScope does not operate in pure-perl mode on perl 5.9.X\n"
   }
   elsif (_PERL_VERSION < '5.010') {
-    require_module('B::Hooks::EndOfScope::PP::HintHash');
+    require B::Hooks::EndOfScope::PP::HintHash;
     *on_scope_end = \&B::Hooks::EndOfScope::PP::HintHash::on_scope_end;
   }
   else {
-    require_module('B::Hooks::EndOfScope::PP::FieldHash');
+    require B::Hooks::EndOfScope::PP::FieldHash;
     *on_scope_end = \&B::Hooks::EndOfScope::PP::FieldHash::on_scope_end;
   }
 }
