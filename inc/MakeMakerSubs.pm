@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 # Secondary compile testing via ExtUtils::CBuilder
 sub can_xs {
   # Do we have the configure_requires checker?
