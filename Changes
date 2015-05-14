@@ -1,6 +1,6 @@
 Revision history for B-Hooks-EndOfScope
 
-{{$NEXT}}
+0.15      2015-05-14 21:46:06Z
   - updated the tooling for generating Makefile.PL
   - removed Tie::StdHash from prereqs, which is not require()able as a module
     on its own (despite being indexed) (miyagawa, GH #3)

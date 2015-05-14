@@ -8,7 +8,7 @@ B::Hooks::EndOfScope - Execute code after a scope finished compilation
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,7 @@ the same terms as the Perl 5 programming language system itself.
 
 =head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge Simon Wilper Tomas Doran
+=for stopwords Karen Etheridge Simon Wilper Tatsuhiko Miyagawa Tomas Doran
 
 =over 4
 
@@ -91,6 +91,10 @@ Karen Etheridge <ether@cpan.org>
 =item *
 
 Simon Wilper <sxw@chronowerks.de>
+
+=item *
+
+Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 
 =item *
 
