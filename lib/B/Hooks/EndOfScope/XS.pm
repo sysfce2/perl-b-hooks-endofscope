@@ -37,6 +37,10 @@ sub on_scope_end (&) {
   }
 }
 
+1;
+__END__
+
+=pod
 
 =head1 DESCRIPTION
 
@@ -56,5 +60,3 @@ compiled.
 This is exported by default. See L<Sub::Exporter> on how to customize it.
 
 =cut
-
-1;

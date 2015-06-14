@@ -44,6 +44,11 @@ sub __invoke_callback {
   };
 }
 
+1;
+__END__
+
+=pod
+
 =head1 DESCRIPTION
 
 This is the pure-perl implementation of L<B::Hooks::EndOfScope> based only on
@@ -64,5 +69,3 @@ compiled.
 This is exported by default. See L<Sub::Exporter> on how to customize it.
 
 =cut
-
-1;

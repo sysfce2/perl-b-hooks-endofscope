@@ -25,6 +25,11 @@ use Sub::Exporter::Progressive 0.001006 -setup => {
   groups  => { default => ['on_scope_end'] },
 };
 
+1;
+__END__
+
+=pod
+
 =head1 SYNOPSIS
 
     on_scope_end { ... };
@@ -71,5 +76,3 @@ L<Sub::Exporter>
 L<Variable::Magic>
 
 =cut
-
-1;
