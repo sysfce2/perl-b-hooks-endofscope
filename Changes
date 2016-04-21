@@ -1,6 +1,8 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - Makefile.PL now checks for a working compiler using ExtUtils::HasCompiler
+    (inlined into the build) rather than ExtUtils::CBuilder
 
 0.16      2015-09-19 19:01:04Z (TRIAL RELEASE)
   - more Makefile.PL updates - these contain slight functionality changes,
