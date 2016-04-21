@@ -1,6 +1,8 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - fixed unnecessary inlining of ExtUtils::HasCompiler dependencies
+    (RT#113685)
 
 0.17      2016-04-21 11:25:35Z (TRIAL RELEASE)
   - Makefile.PL now checks for a working compiler using ExtUtils::HasCompiler
