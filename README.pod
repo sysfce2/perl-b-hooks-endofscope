@@ -8,7 +8,7 @@ B::Hooks::EndOfScope - Execute code after a scope finished compilation
 
 =head1 VERSION
 
-version 0.16
+version 0.17
 
 =head1 SYNOPSIS
 
@@ -100,7 +100,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =back
 
-=head1 COPYRIGHT AND LICENSE
+=head1 COPYRIGHT AND LICENCE
 
 This software is copyright (c) 2008 by Florian Ragwitz.
 
