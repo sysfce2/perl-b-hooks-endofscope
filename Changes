@@ -1,6 +1,6 @@
 Revision history for B-Hooks-EndOfScope
 
-{{$NEXT}}
+0.18      2016-04-21 15:22:10Z (TRIAL RELEASE)
   - fixed unnecessary inlining of ExtUtils::HasCompiler dependencies
     (RT#113685)
 
