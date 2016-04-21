@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::PP;
 use warnings;
 use strict;
 
-our $VERSION = '0.18';
+our $VERSION = '0.19';
 
 use constant _PERL_VERSION => "$]";
 
