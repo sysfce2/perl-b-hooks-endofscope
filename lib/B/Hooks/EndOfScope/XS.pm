@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::XS;
 use strict;
 use warnings;
 
-our $VERSION = '0.19';
+our $VERSION = '0.20';
 
 use Variable::Magic 0.48 ();
 use Sub::Exporter::Progressive 0.001006 -setup => {
