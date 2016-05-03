@@ -1,6 +1,6 @@
 Revision history for B-Hooks-EndOfScope
 
-{{$NEXT}}
+0.19      2016-05-03 00:49:01Z
   - bundled an updated ExtUtils::HasCompiler, to support building with a
     noexec $TMPDIR.
 
