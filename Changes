@@ -1,6 +1,7 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - work with Object::Remote by removing require() call on Tie::StdHash in PP
 
 0.20      2016-05-06 16:42:50Z
   - remove unnecessary and erroneous extra crud in inc/
