@@ -8,7 +8,7 @@ B::Hooks::EndOfScope - Execute code after a scope finished compilation
 
 =head1 VERSION
 
-version 0.20
+version 0.21
 
 =head1 SYNOPSIS
 
@@ -78,13 +78,17 @@ Peter Rabbitson <ribasushi@cpan.org>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge Simon Wilper Tatsuhiko Miyagawa Tomas Doran
+=for stopwords Karen Etheridge Christian Walde Simon Wilper Tatsuhiko Miyagawa Tomas Doran
 
 =over 4
 
 =item *
 
 Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Christian Walde <walde.christian@googlemail.com>
 
 =item *
 
