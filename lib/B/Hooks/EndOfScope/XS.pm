@@ -25,15 +25,13 @@ my $wiz = Variable::Magic::wizard
 ;
 
 sub on_scope_end (&) {
-  my $cb = shift;
-
   $^H |= 0x020000;
 
   if (my $stack = Variable::Magic::getdata %^H, $wiz) {
-    push @{ $stack }, $cb;
+    push @{ $stack }, $_[0];
   }
   else {
-    Variable::Magic::cast %^H, $wiz, $cb;
+    Variable::Magic::cast %^H, $wiz, $_[0];
   }
 }
 

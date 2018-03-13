@@ -26,16 +26,10 @@ sub on_scope_end (&) {
   push @{
     $^H{sprintf '__B_H_EOS__guardstack_0X%x', Scalar::Util::refaddr(\%^H) }
       ||= bless ([], 'B::Hooks::EndOfScope::PP::_SG_STACK')
-  }, shift;
+  }, $_[0];
 }
 
-package # hide from the pauses
-  B::Hooks::EndOfScope::PP::_SG_STACK;
-
-use warnings;
-use strict;
-
-sub DESTROY {
+sub B::Hooks::EndOfScope::PP::_SG_STACK::DESTROY {
   B::Hooks::EndOfScope::PP::__invoke_callback($_) for @{$_[0]};
 }
 
