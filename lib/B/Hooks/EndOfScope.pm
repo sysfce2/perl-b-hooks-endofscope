@@ -7,10 +7,7 @@ use warnings;
 
 our $VERSION = '0.22';
 
-# note - a %^H tie() fallback will probably work on 5.6 as well,
-# if you need to go that low - sane patches passing *all* tests
-# will be gladly accepted
-use 5.008001;
+use 5.006001;
 
 BEGIN {
   use Module::Implementation 0.05;
@@ -86,6 +83,19 @@ In order to stabilize this workaround use of L<Variable::Magic> is disabled
 on perls prior to version 5.8.4. On such systems loading/requesting
 L<B::Hooks::EndOfScope::XS> explicitly will result in a compile-time
 exception.
+
+=head2 Perl versions 5.6.x
+
+Versions of perl before 5.8.0 lack a feature allowing changing the visibility
+of C<%^H> via setting bit 17 within C<$^H>. As such the only way to achieve
+the effect necessary for this module to work, is to use the C<local> operator
+explicitly on these platforms. This might lead to unexpected interference
+with other scope-driven libraries relying on the same mechanism. On the flip
+side there are no such known incompatibilities at the time this note was
+written.
+
+For further details on the unavailable behavior please refer to the test
+file F<t/02-localise.t> included with the distribution.
 
 =head1 SEE ALSO
 
