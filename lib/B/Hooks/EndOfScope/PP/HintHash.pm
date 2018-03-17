@@ -11,6 +11,12 @@ use warnings;
 our $VERSION = '0.23';
 
 use Scalar::Util ();
+use constant _NEEDS_MEMORY_CORRUPTION_FIXUP => (
+  "$]" >= 5.008
+    and
+  "$]" < 5.008004
+) ? 1 : 0;
+
 
 use constant _PERL_VERSION => "$]";
 
@@ -27,12 +33,10 @@ sub on_scope_end (&) {
   local %^H = %^H
     if _PERL_VERSION < 5.008;
 
-  # Workaround for memory corruption dueing implicit $^H-induced
+  # Workaround for memory corruption during implicit $^H-induced
   # localization of %^H on 5.8.0~5.8.3, see extended comment below
   bless \%^H, 'B::Hooks::EndOfScope::PP::HintHash::__GraveyardTransport' if (
-    _PERL_VERSION >= 5.008
-      and
-    _PERL_VERSION < 5.008004
+    _NEEDS_MEMORY_CORRUPTION_FIXUP
       and
     ref \%^H eq 'HASH'  # only bless if it is a "pure hash" to start with
   );
@@ -70,7 +74,8 @@ sub B::Hooks::EndOfScope::PP::_SG_STACK::DESTROY {
 
   # "Leak" this entire structure: ensures it and its contents will not be
   # garbage collected until the very very very end
-  push @Hint_Hash_Graveyard, \@Hint_Hash_Graveyard;
+  push @Hint_Hash_Graveyard, \@Hint_Hash_Graveyard
+    if _NEEDS_MEMORY_CORRUPTION_FIXUP;
 
   sub B::Hooks::EndOfScope::PP::HintHash::__GraveyardTransport::DESTROY {
 
