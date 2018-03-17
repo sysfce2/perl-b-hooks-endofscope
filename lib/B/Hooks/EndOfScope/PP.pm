@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::PP;
 use warnings;
 use strict;
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 BEGIN {
   if ("$]" =~ /^5\.009/) {

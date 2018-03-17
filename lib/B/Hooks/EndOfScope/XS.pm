@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::XS;
 use strict;
 use warnings;
 
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 # Limit the V::M-based (XS) version to perl 5.8.4+
 #
