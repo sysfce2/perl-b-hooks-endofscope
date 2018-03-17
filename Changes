@@ -1,6 +1,7 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - improve use of constants in compile-time perl version checks
 
 0.22      2018-03-17 19:31:37Z (TRIAL RELEASE)
   - Fix memory corruption on perls 5.8.0 - 5.8.3

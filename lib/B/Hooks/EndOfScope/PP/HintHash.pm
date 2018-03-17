@@ -12,25 +12,27 @@ our $VERSION = '0.23';
 
 use Scalar::Util ();
 
+use constant _PERL_VERSION => "$]";
+
 # This is the original implementation, which sadly is broken
 # on perl 5.10+ within string evals
 sub on_scope_end (&) {
 
   # the scope-implicit %^H localization is a 5.8+ feature
   $^H |= 0x020000
-    if "$]" >= 5.008;
+    if _PERL_VERSION >= 5.008;
 
   # the explicit localization of %^H works on anything < 5.10
   # but we use it only on 5.6 where fiddling $^H has no effect
   local %^H = %^H
-    if "$]" < 5.008;
+    if _PERL_VERSION < 5.008;
 
   # Workaround for memory corruption dueing implicit $^H-induced
   # localization of %^H on 5.8.0~5.8.3, see extended comment below
   bless \%^H, 'B::Hooks::EndOfScope::PP::HintHash::__GraveyardTransport' if (
-    "$]" >= 5.008
+    _PERL_VERSION >= 5.008
       and
-    "$]" < 5.008004
+    _PERL_VERSION < 5.008004
       and
     ref \%^H eq 'HASH'  # only bless if it is a "pure hash" to start with
   );
