@@ -1,5 +1,7 @@
 Revision history for B-Hooks-EndOfScope
 
+{{$NEXT}}
+
 0.23      2018-03-17 23:33:09Z (TRIAL RELEASE)
   - improve use of constants in compile-time perl version checks
 
