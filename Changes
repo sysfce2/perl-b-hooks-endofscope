@@ -1,6 +1,7 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - Fix memory corruption on perls 5.8.0 - 5.8.3
 
 0.21      2016-05-25 18:34:46Z
   - work with Object::Remote by removing require() call on Tie::StdHash in PP
