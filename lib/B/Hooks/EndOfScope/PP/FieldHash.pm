@@ -39,7 +39,7 @@ sub on_scope_end (&) {
   tie(%hh, 'B::Hooks::EndOfScope::PP::_TieHintHashFieldHash')
     unless tied %hh;
 
-  push @{ $hh{\%^H} ||= [] }, shift;
+  push @{ $hh{\%^H} ||= [] }, $_[0];
 }
 
 1;

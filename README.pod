@@ -72,7 +72,7 @@ Florian Ragwitz <rafl@debian.org>
 
 =item *
 
-Peter Rabbitson <ribasushi@cpan.org>
+Peter Rabbitson <ribasushi@leporine.io>
 
 =back
 
