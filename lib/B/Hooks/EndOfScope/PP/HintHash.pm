@@ -62,7 +62,7 @@ sub B::Hooks::EndOfScope::PP::_SG_STACK::DESTROY {
 #
 # While we can not prevent the hinthash being marked for destruction twice,
 # we *can* intercept the first DESTROY pass, and squirrel away the entire
-# structure, until a time it can ( hopefully ) no longer do any visible harm
+# structure, until a time it can (hopefully) no longer do any visible harm
 #
 # There still *will* be corruption by the time we get to free it for real,
 # since we can not prevent Perl's erroneous SAVEFREESV mark. What we hope is
@@ -85,7 +85,7 @@ sub B::Hooks::EndOfScope::PP::_SG_STACK::DESTROY {
     # ensure we won't try to re-resurrect during GlobalDestroy
     bless $_[0], 'B::Hooks::EndOfScope::PP::HintHash::__DeactivateGraveyardTransport';
 
-    # Perform explicit free of elements ( if any ) triggering all callbacks
+    # Perform explicit free of elements (if any) triggering all callbacks
     # This is what would have happened without this code being active
     %{$_[0]} = ();
   }

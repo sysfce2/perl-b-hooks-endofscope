@@ -26,7 +26,7 @@ my $wiz = Variable::Magic::wizard
   free => sub { $_->() for @{ $_[1] }; () },
   # When someone localise %^H, our magic doesn't want to be copied
   # down. We want it to be around only for the scope we've initially
-  # attached ourselfs to. Merely having MGf_LOCAL and a noop svt_local
+  # attached ourselves to. Merely having MGf_LOCAL and a noop svt_local
   # callback achieves this. If anything wants to attach more magic of our
   # kind to a localised %^H, things will continue to just work as we'll be
   # attached with a new and empty callback list.
