@@ -42,6 +42,7 @@ matrix:
     - perl: "5.8.8"
       env: AUTHOR_TESTING=0
     - perl: "5.8.8-thr"
+      env: AUTHOR_TESTING=0
     # modules required for author testing do not build on 5.6
     - perl: "5.6.2"
       env: AUTHOR_TESTING=0
