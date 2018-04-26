@@ -48,6 +48,9 @@ matrix:
       env: AUTHOR_TESTING=0
     - perl: "5.6.2-thr"
       env: AUTHOR_TESTING=0
+  allow_failures:
+    - perl: "5.6.2"
+    - perl: "5.6.2-thr"
 env:
   global:
     - AUTHOR_TESTING=1
