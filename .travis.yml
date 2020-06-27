@@ -70,6 +70,8 @@ before_install:
   - build-dist
   - cd $BUILD_DIR
 install:
+    # Use of uninitialized value in pattern match (m//) at /home/travis/perl5/perlbrew/perls/5.8.0/lib/5.8.0/File/Spec/Unix.pm line 206.
+  - cpan-install File::Spec
   - cpan-install --deps
 script:
   - perl Makefile.PL
