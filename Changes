@@ -1,6 +1,8 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - update bundled version of ExtUtils::HasCompiler, for new new Apple
+    include paths
 
 0.25      2021-10-10 19:34:55Z
   - add test of dieing inside an on_scope_end() (PR#8)
