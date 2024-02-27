@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::XS;
 use strict;
 use warnings;
 
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 
 # Limit the Variable::OnDestruct-based (XS) version to perl 5.8.4+
 #
