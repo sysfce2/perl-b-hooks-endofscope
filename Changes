@@ -1,6 +1,6 @@
 Revision history for B-Hooks-EndOfScope
 
-{{$NEXT}}
+0.27      2024-02-27 23:48:24Z
   - switched from Variable::Magic to Variable::OnDestruct in the XS
     implementation (Graham Knop, PR#9)
   - add optional prereqs to metadata to help prereq analysis tools (RT#151992)
