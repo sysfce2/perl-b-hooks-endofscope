@@ -6,7 +6,7 @@ use warnings;
 
 our $VERSION = '0.28';
 
-# Limit the V::M-based (XS) version to perl 5.8.4+
+# Limit the Variable::Magic-based (XS) version to perl 5.8.4+
 #
 # Given the unorthodox stuff we do to work around the hinthash double-free
 # might as well play it safe and only implement it in the PP version
