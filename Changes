@@ -1,6 +1,8 @@
 Revision history for B-Hooks-EndOfScope
 
 {{$NEXT}}
+  - revert Variable::Magic->Variable::OnDestruct change; Variable::Magic will
+    start working again in perl 5.39.9. (Graham Knop, PR#10)
 
 0.27      2024-02-27 23:48:24Z
   - switched from Variable::Magic to Variable::OnDestruct in the XS
