@@ -5,7 +5,7 @@ package B::Hooks::EndOfScope;
 use strict;
 use warnings;
 
-our $VERSION = '0.27';
+our $VERSION = '0.29';
 
 use 5.006001;
 
