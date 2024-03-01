@@ -4,7 +4,7 @@ package B::Hooks::EndOfScope::XS;
 use strict;
 use warnings;
 
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 
 # Limit the Variable::Magic-based (XS) version to perl 5.8.4+
 #
